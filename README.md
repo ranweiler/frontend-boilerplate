@@ -17,7 +17,7 @@ Todo:
 - Bundle minifaction
 - Dynamic bundle loading
 - Live reload of development server
-- Paramaterize build for dev/production
+- Parameterize build for dev/production
 - CSS preprocessing
 - Babel for ES6 support
 - JSX support
