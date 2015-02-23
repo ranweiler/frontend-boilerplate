@@ -1,7 +1,6 @@
 appPath = '../src/component/App'
 jest.dontMock(appPath)
 
-# jest.dontMock('./helpers/describeComponent')
 describeComponent = require('./helpers/describeComponent')
 
 describeComponent 'App', ->
