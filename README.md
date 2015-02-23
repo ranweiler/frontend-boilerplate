@@ -1,7 +1,6 @@
 This is a WIP boilerplate repo for building and testing single-page browser
 applications using React. It will be updated and upgraded as libraries evolve.
-The supported projects are smaller demonstrators and clients that do demand
-features such as
+The supported projects are smaller demonstrators and locally-run clients.
 
 Libraries used:
 - Browserify for bundling
