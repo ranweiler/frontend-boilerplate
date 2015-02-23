@@ -85,7 +85,12 @@ gulp.task 'test', ->
     testFileExtensions: ['coffee', 'js']
     testPathDirs: ['tests']
     testPathIgnorePatterns: ['tests/helpers']
-    unmockedModulePathPatterns: ['react', 'react/addons', 'jasmine-spec-reporter']
+    unmockedModulePathPatterns: [
+      'jasmine-spec-reporter'
+      'react'
+      'react/addons'
+      'tests/helpers'
+    ]
 
   # Our `src` is `.` because Jest has its own configured notion of `rootDir`
   gulp.src('.').pipe(jest(options))

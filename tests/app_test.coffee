@@ -1,25 +1,14 @@
 appPath = '../src/component/App'
 jest.dontMock(appPath)
 
-describe 'App', ->
-  # Implicitly declare names that appear in `beforeEach` blocks.
-  # Generic React (sub)-modules
-  React = TestUtils = null
+# jest.dontMock('./helpers/describeComponent')
+describeComponent = require('./helpers/describeComponent')
 
-  # Names specific to the tests
-  App = el = app = null
-
-  beforeEach ->
-    # Load the actual React and TestUtils modules. We expect these to be the
-    # actual modules, which is true if 'react/addons' is in the array of names
-    # in `jest.config.unmockedModulePathPatterns`.
-    React = require('react/addons')
-    {TestUtils} = React.addons
-
-  beforeEach ->
-    App = require(appPath)
-    el = React.createElement App, {}
-    app = TestUtils.renderIntoDocument(el)
+describeComponent 'App', ->
+  beforeEach =>
+    @App = require(appPath)
+    @el = React.createElement App, {}
+    @app = TestUtils.renderIntoDocument(el)
     expect(app).toBeDefined()
 
   it 'contains a default greeting', ->
